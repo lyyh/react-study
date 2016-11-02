@@ -30,6 +30,13 @@
                 }
             },
             {
+                test: /\.js?$/,
+                exclude: /(node_modules|bower_components)/,
+                loaders: [
+                  'babel?presets[]=react,presets[]=es2015,presets[]=stage-0'
+                ]
+            },
+            {
               test: /\.less$/,
               loader: 'style!css!less'
             },
