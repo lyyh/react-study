@@ -2,12 +2,13 @@
  var webpack = require('webpack')
 
  var config = {
-  
-    entry: [
-    'webpack-hot-middleware/client',
-    './appsrc/entry/index'
-    ],
 
+  
+//     entry: [
+//     'webpack-hot-middleware/client',
+//     './appsrc/entry/index'
+//     ],
+   entry: './appsrc/entry/index',
    output: {
       path:path.join(__dirname, "/dist"),
       filename: 'bundle.js',
@@ -47,12 +48,12 @@
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-            warnings: false
-        }
-     })
+        })
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //     warnings: false
+        // }
+     // })
    ]
 }
 
